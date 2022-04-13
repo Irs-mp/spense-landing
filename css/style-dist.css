@@ -1,0 +1,272 @@
+html{box-sizing: border-box;}
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+body{
+  font-family: var(--cabin);
+}
+:root{
+  --cabin: 'Cabin', sans-serif;
+  --bg-hero: hsl(36, 14%, 93%);
+  --black: hsl(0 0% 0%);
+  --white: hsl(0 0% 100%);
+  --ttl-main: hsl(0, 0%, 16%);
+  --copy: hsl(44, 14%, 31%);
+  --inpt: hsl(60, 2%, 67%);
+  --txt-footer: hsl(0, 0%, 62%);
+}
+
+.underline{
+  text-decoration: underline;
+}
+.italic{
+  font-style: italic;
+}
+.flex{
+  display: flex;
+  align-items: center;
+}
+.clr-ttl{
+  color: var(--ttl-main);
+}
+.clr-copy{
+  color: var(--copy);
+}
+.fw-700{
+  font-weight: 700;
+}
+
+/* ASIDE */
+.aside{
+  padding: 1rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--black);
+}
+.hide-aside{
+  display: none;
+}
+
+
+/* HERO */
+.hero{
+  background-color: var(--bg-hero);
+}
+
+/* HEADER */
+.header,
+.main{
+  max-width: 62.5rem;
+}
+.header{
+  margin-inline: auto;
+  padding: 1.5rem 1rem;
+  /* display: flex;
+  align-items: center; */
+}
+
+/* LOGO */
+.header__logo{
+  font-size: 1.13rem;
+  font-weight: 700;
+}
+
+/* TOGGLE */
+.header__toggle{
+  margin-left: auto;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.container-nav{
+  display: none;
+}
+.show-nav{
+  display: block;
+}
+
+.header__nav{
+  width: 100%;
+  height: 100vh;
+  gap: 3rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: hsl(0 0% 0%/ .7);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  overflow-y: scroll;
+}
+@media screen and (orientation: landscape) and (max-height: 28.125rem){
+  .header__menu{
+    margin-top: 5rem;
+  }
+}
+
+.header__nav,
+.header__menu,
+.header__ctas{
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.header__menu,
+.header__ctas{
+  width: 100%;
+  gap: 2rem;
+}
+
+.header__menu--item,
+.cta{
+  width: 100%;
+  padding-block: .8rem;
+  font-variant: small-caps;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.active,
+.btn-start{
+  color: var(--white);
+  background-color: var(--black);
+}
+.header__menu--item:hover,
+.cta:hover{
+  background-color: var(--black);
+  transition: background-color .3s ease;
+}
+
+
+/* MAIN */
+.main{
+  padding-bottom: 2.5rem;
+}
+.main__fig,
+.main__sec{
+  margin-inline: auto;
+  width: 90vw;
+}
+
+/* MAIN LIST */
+.main__list{
+  flex-direction: column;
+  align-items: start;
+  gap: .5rem;
+}
+.main__list--item{
+  gap: 1rem;
+}
+.main__list--item::before{
+  content: '';
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url(../assets/icons/checkmark.svg) no-repeat;
+}
+
+/* FORM */
+.main__form{
+  margin-top: 2rem;
+  gap: 2rem;
+}
+.inpt-email,
+.btn-start{
+  border: 0;
+  outline: 0;
+  padding: 1rem 1.5rem ;
+  border-radius: .5rem;
+}
+.inpt-email{
+  width: 48.5vw;
+  max-width: 11.4rem;
+  border: thin solid var(--inpt);
+}
+.inpt-email::-moz-placeholder{
+  color: var(--inpt);
+}
+.inpt-email:-ms-input-placeholder{
+  color: var(--inpt);
+}
+.inpt-email::placeholder{
+  color: var(--inpt);
+}
+.btn-start{
+  white-space: nowrap;
+}
+
+/* MEDIA TABLET 48rem */
+@media screen and (min-width: 48rem){
+  .header__toggle{
+    display: none;
+  }
+  .container-nav{
+    display: block;
+    margin-left: auto;
+  }
+  .header__nav{
+    width: unset;
+    height: unset;
+    gap: .5rem;
+    position: unset;
+    background-color: unset;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+    overflow-y: unset;
+  }
+  .header__nav,
+  .header__menu,
+  .header__ctas{
+    flex-direction: row;
+    justify-content: unset;
+  }
+  .header__menu,
+  .header__ctas{
+    gap: .5rem;
+  }
+  .header__menu--item,
+  .cta{
+    padding: .6rem 1.5rem;
+    font-size: 1rem;
+    font-variant: normal;
+    color: var(--black);
+    border-radius: .5rem;
+  }
+  .cta-start{
+    color: var(--white);
+    white-space: nowrap;
+  }
+
+  .header__menu--item:hover,
+  .cta-login:hover{
+    color: var(--white);
+  }
+  .active:hover{
+    background-color: hsl(0 0% 0%/.8);
+  }
+}
+
+/* MEDIA LAPTOP 64rem */
+@media screen and (min-width: 64rem){
+  .header__nav{
+    gap: 5rem;
+  }
+  .header__menu,
+  .header__ctas{
+    gap: 1rem;
+  }
+  .header__menu--item,
+  .cta{
+    font-size: 1.11rem;
+  }
+}

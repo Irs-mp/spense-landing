@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spense</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style-dist.css">
+
+  <script defer src="js/main.js"></script>
+
+</head>
+
+<body>
+  <aside id="aside" class="aside">
+    <a href="#">
+      🎉To celebrate Spense's launch, we will be waiving all fees for the entire month of April. <span class="underline">You will be receiving 100% of the earnings.</span> 🎉
+    </a>
+  </aside>
+
+  <div class="hero">
+    <header class="header flex">
+      <span class="header__logo">spense.</span>
+
+      <div id="header__toggle" class="header__toggle">
+        <img src="assets/icons/hamburger-menu.svg" alt="Three horizontal black bars">
+      </div>
+
+      <div id="container-nav" class="container-nav">
+        <nav class="header__nav flex">
+          <ul class="header__menu flex">
+            <li class="header__menu--item">
+              <a href="#" class="header__menu--link">Business</a>
+            </li>
+            <li class="header__menu--item">
+              <a href="#" class="header__menu--link">Pricing</a>
+            </li>
+            <li class="header__menu--item">
+              <a href="#" class="header__menu--link">Features</a>
+            </li>
+          </ul>
+          <div class="header__ctas flex">
+            <a href="#" class="cta cta-login">Login</a>
+            <a href="#" class="cta cta-start active">Get Started</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <figure class="main__fig">
+        <img src="assets/images/hero-mobile.png" alt="A woman working on her laptop" class="main__fig--img">
+      </figure>
+      <section class="main__sec">
+        <h1 class="main__ttl clr-ttl">
+          Share your unfiltered thoughts. Get paid.
+        </h1>
+        <p class="main__prr clr-copy">
+          Spense is an open platform for individuals to share their unfiltered thoughts. Discurss the topics you love, and get paid for doing <span class="italic">just</span> that.
+        </p>
+        <ul class="main__list flex fw-700 clr-copy">
+          <li class="main__list--item flex">
+            Receive 99% off the earnings.
+          </li>
+          <li class="main__list--item flex">
+            Get paid via Debit Card, ACH, or PayPal.
+          </li>
+          <li class="main__list--item flex">
+            Withdraw your earnings anytime.
+          </li>
+        </ul>
+        <form action="GET" class="main__form flex">
+          <input type="email" name="emai" id="email" placeholder="john@example.com" class="inpt-email">
+          <button type="submit" class="btn-start">Get Started</button>
+        </form>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>
