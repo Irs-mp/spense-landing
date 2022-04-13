@@ -59,7 +59,8 @@ body{
 
 /* HEADER */
 .header,
-.main{
+.main,
+.logos{
   max-width: 62.5rem;
 }
 .header{
@@ -153,7 +154,8 @@ body{
   padding-bottom: 2.5rem;
 }
 .main__fig,
-.main__sec{
+.main__sec,
+.logos{
   margin-inline: auto;
   width: 90vw;
 }
@@ -204,6 +206,34 @@ body{
 .btn-start{
   white-space: nowrap;
 }
+
+/* LOGOS */
+.logos{
+  padding-block: 2rem;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 108px;
+  gap: 1rem;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+.logos__fig{
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  scroll-snap-align: start;
+}
+.logos__fig--img{
+  inline-size: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.snap-inline{
+  -ms-scroll-snap-type: inline mandatory;
+      scroll-snap-type: inline mandatory;
+}
+
 
 /* MEDIA TABLET 48rem */
 @media screen and (min-width: 48rem){
